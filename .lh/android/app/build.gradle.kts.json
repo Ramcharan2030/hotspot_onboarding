@@ -1,0 +1,34 @@
+{
+    "sourceFile": "android/app/build.gradle.kts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1762861589722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762861705157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n android {\r\n     namespace = \"com.example.hottspot_onboarding\"\r\n     compileSdk = flutter.compileSdkVersion\r\n-    ndkVersion =  = \"27.0.12077973\"\r\n+    ndkVersion =   \"27.0.12077973\"\r\n \r\n     compileOptions {\r\n         sourceCompatibility = JavaVersion.VERSION_11\r\n         targetCompatibility = JavaVersion.VERSION_11\r\n@@ -23,9 +23,9 @@\n         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).\r\n         applicationId = \"com.example.hottspot_onboarding\"\r\n         // You can update the following values to match your application needs.\r\n         // For more information, see: https://flutter.dev/to/review-gradle-config.\r\n-        minSdk = flutter.minSdkVersion\r\n+        minSdk = 21\r\n         targetSdk = flutter.targetSdkVersion\r\n         versionCode = flutter.versionCode\r\n         versionName = flutter.versionName\r\n     }\r\n"
+                },
+                {
+                    "date": 1762861712280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         applicationId = \"com.example.hottspot_onboarding\"\r\n         // You can update the following values to match your application needs.\r\n         // For more information, see: https://flutter.dev/to/review-gradle-config.\r\n         minSdk = 21\r\n-        targetSdk = flutter.targetSdkVersion\r\n+        targetSdk = 33\r\n         versionCode = flutter.versionCode\r\n         versionName = flutter.versionName\r\n     }\r\n \r\n"
+                },
+                {
+                    "date": 1762861721094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).\r\n         applicationId = \"com.example.hottspot_onboarding\"\r\n         // You can update the following values to match your application needs.\r\n         // For more information, see: https://flutter.dev/to/review-gradle-config.\r\n-        minSdk = 21\r\n+        minSdk = 23\r\n         targetSdk = 33\r\n         versionCode = flutter.versionCode\r\n         versionName = flutter.versionName\r\n     }\r\n"
+                },
+                {
+                    "date": 1762884854451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n         targetSdk = 33\r\n         versionCode = flutter.versionCode\r\n         versionName = flutter.versionName\r\n     }\r\n+}\r\n \r\n     buildTypes {\r\n         release {\r\n             // TODO: Add your own signing config for the release build.\r\n"
+                }
+            ],
+            "date": 1762861589722,
+            "name": "Commit-0",
+            "content": "plugins {\r\n    id(\"com.android.application\")\r\n    id(\"kotlin-android\")\r\n    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.\r\n    id(\"dev.flutter.flutter-gradle-plugin\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.hottspot_onboarding\"\r\n    compileSdk = flutter.compileSdkVersion\r\n    ndkVersion =  = \"27.0.12077973\"\r\n\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_11\r\n        targetCompatibility = JavaVersion.VERSION_11\r\n    }\r\n\r\n    kotlinOptions {\r\n        jvmTarget = JavaVersion.VERSION_11.toString()\r\n    }\r\n\r\n    defaultConfig {\r\n        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).\r\n        applicationId = \"com.example.hottspot_onboarding\"\r\n        // You can update the following values to match your application needs.\r\n        // For more information, see: https://flutter.dev/to/review-gradle-config.\r\n        minSdk = flutter.minSdkVersion\r\n        targetSdk = flutter.targetSdkVersion\r\n        versionCode = flutter.versionCode\r\n        versionName = flutter.versionName\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            // TODO: Add your own signing config for the release build.\r\n            // Signing with the debug keys for now, so `flutter run --release` works.\r\n            signingConfig = signingConfigs.getByName(\"debug\")\r\n        }\r\n    }\r\n}\r\n\r\nflutter {\r\n    source = \"../..\"\r\n}\r\n"
+        }
+    ]
+}

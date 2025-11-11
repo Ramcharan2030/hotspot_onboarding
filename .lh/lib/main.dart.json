@@ -1,0 +1,22 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1762860272345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762860286251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n import 'package:google_fonts/google_fonts.dart';\r\n-import 'package:hotspot_onboarding/features/experience_selection/presentation/experience_selection_screen.dart';\r\n \r\n+import 'package:hottspot_onboarding/features/expericeneselction/presentaion/experince_screen.dart';\r\n+\r\n void main() {\r\n   runApp(const ProviderScope(child: HotspotApp()));\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1762860272345,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_riverpod/flutter_riverpod.dart';\r\nimport 'package:google_fonts/google_fonts.dart';\r\nimport 'package:hotspot_onboarding/features/experience_selection/presentation/experience_selection_screen.dart';\r\n\r\nvoid main() {\r\n  runApp(const ProviderScope(child: HotspotApp()));\r\n}\r\n\r\nclass HotspotApp extends StatelessWidget {\r\n  const HotspotApp({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      title: 'Hotspot Onboarding',\r\n      debugShowCheckedModeBanner: false,\r\n      theme: ThemeData(\r\n        scaffoldBackgroundColor: Colors.white,\r\n        textTheme: GoogleFonts.interTextTheme(),\r\n        colorScheme: ColorScheme.fromSwatch().copyWith(\r\n          primary: Colors.black,\r\n          secondary: Colors.grey[800],\r\n        ),\r\n        appBarTheme: AppBarTheme(\r\n          backgroundColor: Colors.white,\r\n          elevation: 0,\r\n          centerTitle: true,\r\n          titleTextStyle: GoogleFonts.inter(\r\n            color: Colors.black,\r\n            fontWeight: FontWeight.w600,\r\n            fontSize: 18,\r\n          ),\r\n          iconTheme: const IconThemeData(color: Colors.black),\r\n        ),\r\n        inputDecorationTheme: InputDecorationTheme(\r\n          filled: true,\r\n          fillColor: Colors.grey.shade100,\r\n          border: OutlineInputBorder(\r\n            borderRadius: BorderRadius.circular(12),\r\n            borderSide: BorderSide(color: Colors.grey.shade400),\r\n          ),\r\n          focusedBorder: OutlineInputBorder(\r\n            borderRadius: BorderRadius.circular(12),\r\n            borderSide: const BorderSide(color: Colors.black, width: 1.2),\r\n          ),\r\n        ),\r\n      ),\r\n      home: const ExperienceSelectionScreen(),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/features/expericeneselction/provider/experince_provider.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1762859342372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762859351708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n+import 'package:flutter_riverpod/legacy.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_service.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_model.dart';\r\n \r\n class ExperienceSelectionState {\r\n"
+                },
+                {
+                    "date": 1762859361221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n import 'package:flutter_riverpod/legacy.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_service.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_model.dart';\r\n+import 'package:hottspot_onboarding/features/expericeneselction/data/expericen_service.dart';\r\n \r\n class ExperienceSelectionState {\r\n   final List<int> selectedIds;\r\n   final String description;\r\n"
+                }
+            ],
+            "date": 1762859342372,
+            "name": "Commit-0",
+            "content": "import 'package:flutter_riverpod/flutter_riverpod.dart';\r\nimport 'package:hotspot_onboarding/features/experience_selection/data/experience_service.dart';\r\nimport 'package:hotspot_onboarding/features/experience_selection/data/experience_model.dart';\r\n\r\nclass ExperienceSelectionState {\r\n  final List<int> selectedIds;\r\n  final String description;\r\n\r\n  ExperienceSelectionState({\r\n    required this.selectedIds,\r\n    required this.description,\r\n  });\r\n\r\n  ExperienceSelectionState copyWith({\r\n    List<int>? selectedIds,\r\n    String? description,\r\n  }) {\r\n    return ExperienceSelectionState(\r\n      selectedIds: selectedIds ?? this.selectedIds,\r\n      description: description ?? this.description,\r\n    );\r\n  }\r\n}\r\n\r\nclass ExperienceSelectionNotifier\r\n    extends StateNotifier<ExperienceSelectionState> {\r\n  ExperienceSelectionNotifier()\r\n      : super(ExperienceSelectionState(selectedIds: [], description: ''));\r\n\r\n  void toggleSelection(int id) {\r\n    final newIds = List<int>.from(state.selectedIds);\r\n    if (newIds.contains(id)) {\r\n      newIds.remove(id);\r\n    } else {\r\n      newIds.add(id);\r\n    }\r\n    state = state.copyWith(selectedIds: newIds);\r\n  }\r\n\r\n  void setDescription(String text) {\r\n    state = state.copyWith(description: text);\r\n  }\r\n}\r\n\r\n// Providers\r\nfinal experienceSelectionProvider =\r\n    StateNotifierProvider<ExperienceSelectionNotifier, ExperienceSelectionState>(\r\n        (ref) => ExperienceSelectionNotifier());\r\n\r\nfinal experienceServiceProvider = Provider((ref) => ExperienceService());\r\n"
+        }
+    ]
+}

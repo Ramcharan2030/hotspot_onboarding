@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/expericeneselction/data/experince_model.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762858240956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762858240956,
+            "name": "Commit-0",
+            "content": "class ExperienceModel {\r\n  final int id;\r\n  final String name;\r\n  final String tagline;\r\n  final String description;\r\n  final String imageUrl;\r\n  final String iconUrl;\r\n\r\n  ExperienceModel({\r\n    required this.id,\r\n    required this.name,\r\n    required this.tagline,\r\n    required this.description,\r\n    required this.imageUrl,\r\n    required this.iconUrl,\r\n  });\r\n\r\n  factory ExperienceModel.fromJson(Map<String, dynamic> json) {\r\n    return ExperienceModel(\r\n      id: json['id'],\r\n      name: json['name'] ?? '',\r\n      tagline: json['tagline'] ?? '',\r\n      description: json['description'] ?? '',\r\n      imageUrl: json['image_url'] ?? '',\r\n      iconUrl: json['icon_url'] ?? '',\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
