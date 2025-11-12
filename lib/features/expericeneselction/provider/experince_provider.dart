@@ -26,7 +26,7 @@ class ExperienceSelectionState {
 class ExperienceSelectionNotifier
     extends StateNotifier<ExperienceSelectionState> {
   ExperienceSelectionNotifier()
-      : super(ExperienceSelectionState(selectedIds: [], description: ''));
+    : super(ExperienceSelectionState(selectedIds: [], description: ''));
 
   void toggleSelection(int id) {
     final newIds = List<int>.from(state.selectedIds);
@@ -45,7 +45,9 @@ class ExperienceSelectionNotifier
 
 // Providers
 final experienceSelectionProvider =
-    StateNotifierProvider<ExperienceSelectionNotifier, ExperienceSelectionState>(
-        (ref) => ExperienceSelectionNotifier());
+    StateNotifierProvider.autoDispose<
+      ExperienceSelectionNotifier,
+      ExperienceSelectionState
+    >((ref) => ExperienceSelectionNotifier());
 
 final experienceServiceProvider = Provider((ref) => ExperienceService());

@@ -9,7 +9,7 @@ import 'package:hottspot_onboarding/core/widgets/zigzag_background.dart';
 
 // FIX: Add a FutureProvider to fetch and cache the experiences.
 // This provider will be read by the UI.
-final experiencesProvider = FutureProvider<List<ExperienceModel>>((ref) {
+final experiencesProvider = FutureProvider.autoDispose<List<ExperienceModel>>((ref) {
   // It reads the service provider to get the service instance
   final service = ref.read(experienceServiceProvider);
   // It calls the fetch method and returns the Future
@@ -248,13 +248,13 @@ class _ExperienceSelectionScreenState
                         decoration: BoxDecoration(
                           color: kFieldBackgroundColor,
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: kFieldBorderColor),
+                          border: Border.all(color: Color.fromARGB(255, 61, 91, 243)),
                         ),
                         child: TextField(
                           maxLength: 250,
                           maxLines: 4,
                           style: const TextStyle(color: Colors.black),
-                          cursorColor: Colors.white,
+                          cursorColor: const Color.fromARGB(255, 61, 91, 243),
                           decoration: InputDecoration(
                             counterText: '',
                             hintText: '/ Describe your perfect hotspot',

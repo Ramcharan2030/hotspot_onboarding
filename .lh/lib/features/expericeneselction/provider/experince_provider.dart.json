@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1762859342372,
@@ -16,6 +16,10 @@
                 {
                     "date": 1762859361221,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n import 'package:flutter_riverpod/legacy.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_service.dart';\r\n import 'package:hotspot_onboarding/features/experience_selection/data/experience_model.dart';\r\n+import 'package:hottspot_onboarding/features/expericeneselction/data/expericen_service.dart';\r\n \r\n class ExperienceSelectionState {\r\n   final List<int> selectedIds;\r\n   final String description;\r\n"
+                },
+                {
+                    "date": 1762936872774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n import 'package:flutter_riverpod/legacy.dart';\r\n-import 'package:hotspot_onboarding/features/experience_selection/data/experience_service.dart';\r\n-import 'package:hotspot_onboarding/features/experience_selection/data/experience_model.dart';\r\n+\r\n import 'package:hottspot_onboarding/features/expericeneselction/data/expericen_service.dart';\r\n \r\n class ExperienceSelectionState {\r\n   final List<int> selectedIds;\r\n@@ -45,8 +44,8 @@\n }\r\n \r\n // Providers\r\n final experienceSelectionProvider =\r\n-    StateNotifierProvider<ExperienceSelectionNotifier, ExperienceSelectionState>(\r\n+    StateNotifierProvider.autoDispose<ExperienceSelectionNotifier, ExperienceSelectionState>(\r\n         (ref) => ExperienceSelectionNotifier());\r\n \r\n final experienceServiceProvider = Provider((ref) => ExperienceService());\r\n"
                 }
             ],
             "date": 1762859342372,

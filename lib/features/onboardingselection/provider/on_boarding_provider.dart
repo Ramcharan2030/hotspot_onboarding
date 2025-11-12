@@ -1,6 +1,4 @@
-
 import 'package:flutter_riverpod/legacy.dart';
-
 
 class OnboardingState {
   final String answerText;
@@ -76,6 +74,6 @@ class OnboardingNotifier extends StateNotifier<OnboardingState> {
 }
 
 final onboardingProvider =
-    StateNotifierProvider<OnboardingNotifier, OnboardingState>(
+    StateNotifierProvider.autoDispose<OnboardingNotifier, OnboardingState>(
       (ref) => OnboardingNotifier(),
     );

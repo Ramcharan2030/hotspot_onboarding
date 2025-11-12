@@ -524,7 +524,7 @@ class _OnboardingQuestionScreenState
                       focusNode: _focusNode,
                       maxLength: 600,
                       maxLines: 6,
-                      style: const TextStyle(color: Colors.white, fontSize: 14),
+                      style: const TextStyle(color: Colors.black, fontSize: 14),
                       cursorColor: Colors.white,
                       decoration: InputDecoration(
                         counterText: '',
